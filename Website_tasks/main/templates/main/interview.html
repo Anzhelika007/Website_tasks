@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+  Создать новую задачу
+{% endblock %}
+
+{% block content %}
+    <h1>Создать новую задачу</h1>
+    <form method="POST">
+        <p>Выберите раздел:</p>
+            <select name="form_select">
+                <option value="Значение 1" selected="selected">Язык программирования Python</option>
+                <option value="Значение 2">Установка Python и первая программа на Windows</option>
+                <option value="Значение 3">Первая программа в PyCharm</option>
+                <option value="Значение 4">Python в Visual Studio</option>
+                <option value="Значение 5">Введение в написание программ</option>
+            </select><br>
+        <p>Действие :</p>
+        <input id="question" type="radio" name="action" value="question">
+        <label for="question">Вопрос</label>
+        <input id="error" type="radio" name="action" value="error">
+        <label for="error">Ошибка</label>
+        <input id="reference" type="radio" name="action" value="reference">
+        <label for="reference">Справка</label><br>
+        <textarea  cols="150" rows="5" placeholder="Ваше сообщение"></textarea><br>
+
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+
+{% endblock %}

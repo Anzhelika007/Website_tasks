@@ -10,5 +10,8 @@ def index(request):
 def about(request):
     return render(request, 'main/about.html')
 
-def my_page(request):
-    return render(request, 'main/my_page.html')
+def create(request):
+    return render(request, 'main/create.html')
+
+def interview(request):
+    return render(request, 'main/interview.html')
