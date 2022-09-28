@@ -7,8 +7,10 @@
 {% block content %}
     <h1>Создать новую задачу</h1>
     <form method="POST">
+        {% csrf_token %}
       <input type="text" placeholder="Введите название" class="form-control"><br>
       <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+      <textarea type="text" placeholder="Ваш комментарий" class="form-control"></textarea><br>
       <button type="submit" class="btn btn-success">Добавить</button>
     </form>
 
